@@ -1,7 +1,102 @@
-<h1>Hello, enter your consumer and secret key below to then sign into twitter through your other account to get access keys.</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Twitter Access Key Retriever</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form method="GET" action="/add/formsubmit" class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Get Access Key!
+                </span>
+                
+                <% if(err === 'oautherror') { %>
+				<p style="text-align: center;font-weight: bold;color: red;margin-top: -30px;margin-bottom: 20px;">Error getting oAuth token! Please make sure keys entered are valid.</p>
+                <% } %>
+
+				<div class="wrap-input100">
+					<span class="label-input100">Callback Url</span>
+					<input class="input100" type="text" name="" readonly value="https://twitacckey.kaamidev.com/add">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<span class="label-input100">Your API Key</span>
+					<input class="input100" type="text" name="consumer" placeholder="Enter your Consumer Key" required>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<span class="label-input100">Your API Secret Key</span>
+					<input class="input100" type="text" name="secret" placeholder="Enter your Consumer Secret" required>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button type="submit" class="contact100-form-btn">
+							<span>
+								
+								Login with Twitter
+								
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+            </form>
+        </div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- <h1>Hello, enter your consumer and secret key below to then sign into twitter through your other account to get access keys.</h1>
 <h3 style="color: rgb(192, 0, 128);">Before doing this, make sure to enable sign in with twitter on your dev app and set the callback url to the one specified below.</h3>
 <div style="border: 3px solid #000;padding:20px;">    
-    Callback url: <input type="text" style="margin-bottom: 20px;" value="http://127.0.0.1:5000/add/" readonly>
+    Callback url: <input type="text" style="margin-bottom: 20px;" value="https://twitacckey.kaamidev.com/add/" readonly>
     
     <form method="GET" action="/add/formsubmit">
         <% if(err === 'oautherror') { %>
@@ -12,4 +107,4 @@
             <button type="submit">Login with twitter.</button>
         </form>
 </div>
-<p style="margin-top: 70px;">Made by <a href="https://kaami.ca/">Kaami</a></p>
+<p style="margin-top: 70px;">Made by <a href="https://kaami.ca/">Kaami</a></p> -->
