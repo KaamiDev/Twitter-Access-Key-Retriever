@@ -1,0 +1,15 @@
+<h1>Hello, enter your consumer and secret key below to then sign into twitter through your other account to get access keys.</h1>
+<h3 style="color: rgb(192, 0, 128);">Before doing this, make sure to enable sign in with twitter on your dev app and set the callback url to the one specified below.</h3>
+<div style="border: 3px solid #000;padding:20px;">    
+    Callback url: <input type="text" style="margin-bottom: 20px;" value="https://twitacckey.kaamidev.com/add/" readonly>
+    
+    <form method="GET" action="/add/formsubmit">
+        <% if(err === 'oautherror') { %>
+            <p style="color: red">Error getting oAuth token. Please make sure keys entered are valid.</p>
+            <% } %>
+            <input type="text" name="consumer" placeholder="Consumer Key" required>
+            <input type="text" name="secret" placeholder="Consumer Secret" required>
+            <button type="submit">Login with twitter.</button>
+        </form>
+</div>
+<p style="margin-top: 70px;">Made by <a href="https://kaami.ca/">Kaami</a></p>
