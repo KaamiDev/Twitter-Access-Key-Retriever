@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 	const twitter = new twitterAPI({
 		consumerKey: req.session.consumer,
 		consumerSecret: req.session.secret,
-		callback: 'https://twitacckey.kaamidev.com/add/'
+		callback: 'http://127.0.0.1:5000/add/'
 	});
 
 	if (!req.query.oauth_token || !req.query.oauth_verifier) {
